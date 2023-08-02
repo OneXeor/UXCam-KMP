@@ -1,0 +1,6 @@
+target 'iosApp' do
+  use_frameworks!
+  platform :ios, '12.0'
+  pod 'shared', :path => '../shared'
+  pod 'UXCam'
+end
