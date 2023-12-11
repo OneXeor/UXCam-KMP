@@ -6,14 +6,25 @@ Pod::Spec.new do |spec|
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = ''
-    spec.vendored_frameworks      = 'build/cocoapods/framework/uxcam-kmp-shared.framework'
+    spec.vendored_frameworks      = 'build/cocoapods/framework/uxcam_kmp_shared.framework'
     spec.libraries                = 'c++'
     spec.ios.deployment_target = '12.0'
     spec.dependency 'UXCam'
                 
+    if !Dir.exist?('build/cocoapods/framework/uxcam_kmp_shared.framework') || Dir.empty?('build/cocoapods/framework/uxcam_kmp_shared.framework')
+        raise "
+
+        Kotlin framework 'uxcam_kmp_shared' doesn't exist yet, so a proper Xcode project can't be generated.
+        'pod install' should be executed after running ':generateDummyFramework' Gradle task:
+
+            ./gradlew :uxcam-kmp-shared:generateDummyFramework
+
+        Alternatively, proper pod installation is performed during Gradle sync in the IDE (if Podfile location is set)"
+    end
+                
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':uxcam-kmp-shared',
-        'PRODUCT_MODULE_NAME' => 'uxcam-kmp-shared',
+        'PRODUCT_MODULE_NAME' => 'uxcam_kmp_shared',
     }
                 
     spec.script_phases = [
