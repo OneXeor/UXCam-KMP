@@ -7,13 +7,16 @@ on:
 
 jobs:
   release:
-    runs-on: macos-latest
+    runs-on: macos-14
     permissions:
       contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Select Xcode 15.4
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
 
       - name: Setup Java
         uses: actions/setup-java@v4
