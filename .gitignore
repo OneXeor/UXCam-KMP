@@ -10,3 +10,7 @@ local.properties
 xcuserdata
 Podfile.lock
 Pods/
+
+# Claude
+.claude/
+CLAUDE.md
