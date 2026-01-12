@@ -4,6 +4,8 @@ plugins {
     id("com.android.library")
 }
 
+val libraryVersion: String = project.findProperty("VERSION_NAME")?.toString() ?: "1.0.0"
+
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
     targetHierarchy.default()
@@ -22,7 +24,7 @@ kotlin {
     cocoapods {
         summary = "UXCam for KMP example"
         homepage = "onexeor.dev"
-        version = "1.0"
+        version = libraryVersion
         ios.deploymentTarget = "12.0"
         podfile = project.file("../iosApp/Podfile")
         framework {

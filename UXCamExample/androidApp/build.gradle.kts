@@ -3,6 +3,8 @@ plugins {
     kotlin("android")
 }
 
+val libraryVersion: String = project.findProperty("VERSION_NAME")?.toString() ?: "1.0.0"
+
 android {
     namespace = "dev.onexeor.uxcam.uxcamexample.android"
     compileSdk = 33
@@ -11,7 +13,7 @@ android {
         minSdk = 23
         targetSdk = 33
         versionCode = 1
-        versionName = "1.0"
+        versionName = libraryVersion
     }
     buildFeatures {
         compose = true

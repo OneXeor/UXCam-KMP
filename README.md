@@ -24,6 +24,30 @@ A Kotlin Multiplatform wrapper library for [UXCam](https://uxcam.com/) session r
 
 ## Installation
 
+### Kotlin Multiplatform
+
+Add the repository to your `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        maven { url = uri("https://sdk.uxcam.com/android/") }
+    }
+}
+```
+
+Add the dependency to your shared module's `build.gradle.kts`:
+
+```kotlin
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            implementation("dev.onexeor:uxcam-kmp-shared:<version>")
+        }
+    }
+}
+```
+
 ### Android (Gradle)
 
 Add the repository to your `settings.gradle.kts`:
