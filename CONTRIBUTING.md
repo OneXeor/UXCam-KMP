@@ -67,7 +67,7 @@ Feature requests are welcome. Please:
 
 ### Requirements
 
-- JDK 17+
+- JDK 21+
 - Android Studio or IntelliJ IDEA
 - macOS (required for iOS builds)
 - Xcode (for iOS development)
@@ -90,7 +90,7 @@ Feature requests are welcome. Please:
 
 **Android:**
 ```bash
-./gradlew :UXCamExample:androidExample:assembleDebug
+./gradlew :UXCamExample:androidApp:assembleDebug
 ```
 
 **iOS:**
@@ -120,7 +120,7 @@ Add user property logging support
 
 Fix session URL returning null on iOS
 
-Update UXCam SDK to version 3.6.12
+Update UXCam SDK to version 3.8.8
 ```
 
 ## Questions?

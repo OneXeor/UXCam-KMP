@@ -3,7 +3,7 @@
 A Kotlin Multiplatform wrapper library for [UXCam](https://uxcam.com/) session recording SDK, providing a unified Kotlin API for both Android and iOS platforms.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.9.21-blue.svg)](https://kotlinlang.org)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.3.0-blue.svg)](https://kotlinlang.org)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green.svg)](https://kotlinlang.org/docs/multiplatform.html)
 
 ## Features
@@ -17,9 +17,10 @@ A Kotlin Multiplatform wrapper library for [UXCam](https://uxcam.com/) session r
 
 ## Requirements
 
-- Android: minSdk 23+ (compileSdk 33)
+- Android: minSdk 23+ (compileSdk 36, targetSdk 36)
 - iOS: 12.0+
-- Kotlin: 1.9.21+
+- Kotlin: 2.3.0+
+- JDK: 21+
 - UXCam account and API key
 
 ## Installation
