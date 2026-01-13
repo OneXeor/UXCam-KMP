@@ -182,8 +182,12 @@ UXCam.addScreenNamesToIgnore(listOf("LoginScreen", "SettingsScreen"))
 | `optOutOfSchematicRecordings()` | Opt out of schematic recordings (iOS only) |
 | `optIntoSchematicRecordings()` | Opt into schematic recordings (iOS only) |
 | `optInSchematicRecordingStatus()` | Check schematic recording status (iOS only) |
+| `occludeSensitiveView(view)` | Hide sensitive view from recordings |
+| `unOccludeSensitiveView(view)` | Remove occlusion from a view |
 | `addScreenNameToIgnore(screenName)` | Exclude screen from recording |
 | `addScreenNamesToIgnore(screenNames)` | Exclude multiple screens |
+| `removeScreenNameToIgnore(screenName)` | Remove screen from ignore list |
+| `removeAllScreenNamesToIgnore()` | Clear all ignored screens |
 | `allowShortBreakForAnotherApp(b)` | Allow short app switches |
 
 ### UXConfig

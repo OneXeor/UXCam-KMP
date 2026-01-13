@@ -5,6 +5,7 @@ package dev.onexeor.uxcam
 
 import cocoapods.UXCam.UXCam
 import cocoapods.UXCam.UXCamConfiguration
+import platform.UIKit.UIView
 
 actual object UXCam {
 
@@ -28,12 +29,28 @@ actual object UXCam {
         UXCam.tagScreenName(screenName)
     }
 
+    actual fun occludeSensitiveView(view: Any) {
+        (view as? UIView)?.let { UXCam.occludeSensitiveView(it) }
+    }
+
+    actual fun unOccludeSensitiveView(view: Any) {
+        (view as? UIView)?.let { UXCam.unOccludeSensitiveView(it) }
+    }
+
     actual fun addScreenNameToIgnore(screenName: String) {
         UXCam.addScreenNameToIgnore(screenName)
     }
 
     actual fun addScreenNamesToIgnore(screenNames: List<String>) {
         UXCam.addScreenNamesToIgnore(screenNames)
+    }
+
+    actual fun removeScreenNameToIgnore(screenName: String) {
+        UXCam.removeScreenNameToIgnore(screenName)
+    }
+
+    actual fun removeAllScreenNamesToIgnore() {
+        UXCam.removeAllScreenNamesToIgnore()
     }
 
     actual fun allowShortBreakForAnotherApp(b: Boolean) {
