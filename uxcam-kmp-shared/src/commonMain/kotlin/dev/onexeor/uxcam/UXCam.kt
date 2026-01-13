@@ -12,6 +12,18 @@ expect object UXCam {
 
     fun tagScreenName(screenName: String)
 
+    /**
+     * Marks a view as sensitive to be hidden from recordings.
+     * @param view Platform-specific view: Android View or iOS UIView
+     */
+    fun occludeSensitiveView(view: Any)
+
+    /**
+     * Removes occlusion from a previously occluded view.
+     * @param view Platform-specific view: Android View or iOS UIView
+     */
+    fun unOccludeSensitiveView(view: Any)
+
     fun addScreenNameToIgnore(screenName: String)
 
     fun addScreenNamesToIgnore(screenNames: List<String>)

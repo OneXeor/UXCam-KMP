@@ -2,6 +2,7 @@
 
 package dev.onexeor.uxcam
 
+import android.view.View
 import com.uxcam.OnVerificationListener
 import com.uxcam.UXCam
 import com.uxcam.datamodel.UXConfig
@@ -36,6 +37,14 @@ actual object UXCam {
 
     actual fun tagScreenName(screenName: String) {
         UXCam.tagScreenName(screenName)
+    }
+
+    actual fun occludeSensitiveView(view: Any) {
+        (view as? View)?.let { UXCam.occludeSensitiveView(it) }
+    }
+
+    actual fun unOccludeSensitiveView(view: Any) {
+        (view as? View)?.let { UXCam.unOccludeSensitiveView(it) }
     }
 
     actual fun addScreenNameToIgnore(screenName: String) {
