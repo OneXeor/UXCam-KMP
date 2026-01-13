@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (for manual trigger)'
+        required: false
+        default: ''
 
 jobs:
   release:
