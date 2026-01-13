@@ -61,6 +61,10 @@ actual object UXCam {
 
     actual fun urlForCurrentUser(): String? = UXCam.urlForCurrentUser()
 
+    actual fun isRecording(): Boolean = UXCam.isRecording()
+
+    actual fun pendingUploads(): Int = UXCam.pendingUploads().toInt()
+
     actual fun setUserIdentity(identity: String) {
         UXCam.setUserIdentity(identity)
     }

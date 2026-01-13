@@ -32,6 +32,10 @@ expect object UXCam {
 
     fun urlForCurrentUser(): String?
 
+    fun isRecording(): Boolean
+
+    fun pendingUploads(): Int
+
     fun setUserIdentity(identity: String)
 
     fun logEvent(eventName: String?)
