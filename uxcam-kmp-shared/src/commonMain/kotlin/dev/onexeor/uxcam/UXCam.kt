@@ -10,6 +10,8 @@ expect object UXCam {
         completionHandler: (Boolean) -> Unit = {}
     )
 
+    fun tagScreenName(screenName: String)
+
     fun addScreenNameToIgnore(screenName: String)
 
     fun addScreenNamesToIgnore(screenNames: List<String>)

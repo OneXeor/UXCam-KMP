@@ -163,6 +163,7 @@ UXCam.addScreenNamesToIgnore(listOf("LoginScreen", "SettingsScreen"))
 | Method | Description |
 |--------|-------------|
 | `startWithConfiguration(key, config, completionHandler)` | Initialize UXCam with API key and configuration |
+| `tagScreenName(screenName)` | Manually tag current screen with a name |
 | `setUserIdentity(identity)` | Set user identifier |
 | `setUserProperty(key, value)` | Set custom user property |
 | `logEvent(eventName, properties?)` | Log custom event |

@@ -21,6 +21,10 @@ actual object UXCam {
         UXCam.startWithConfiguration(configuration, completionHandler)
     }
 
+    actual fun tagScreenName(screenName: String) {
+        UXCam.tagScreenName(screenName)
+    }
+
     actual fun addScreenNameToIgnore(screenName: String) {
         UXCam.addScreenNameToIgnore(screenName)
     }
