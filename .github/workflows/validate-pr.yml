@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
 
       - name: Build Android
-        run: ./gradlew :uxcam-kmp-shared:compileReleaseKotlinAndroid :uxcam-kmp-shared:bundleReleaseAar --no-daemon
+        run: ./gradlew :uxcam-kmp-shared:assembleAndroidMain --no-daemon

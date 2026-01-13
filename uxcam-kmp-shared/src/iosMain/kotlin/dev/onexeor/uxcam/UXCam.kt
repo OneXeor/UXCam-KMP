@@ -1,4 +1,5 @@
 @file:Suppress("UNUSED")
+@file:OptIn(kotlinx.cinterop.ExperimentalForeignApi::class)
 
 package dev.onexeor.uxcam
 

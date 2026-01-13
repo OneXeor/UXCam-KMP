@@ -17,4 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "UXCam-KMP"
 include(":uxcam-kmp-shared")
 include(":UXCamExample:shared")
-include(":UXCamExample:androidExample")
+include(":UXCamExample:androidApp")
