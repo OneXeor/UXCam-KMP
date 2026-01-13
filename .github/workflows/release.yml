@@ -13,7 +13,7 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     permissions:
       contents: write
 
@@ -30,8 +30,8 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Build Android
-        run: ./gradlew :uxcam-kmp-shared:assembleAndroidMain --no-daemon
+      - name: Build All Platforms
+        run: ./gradlew :uxcam-kmp-shared:build --no-daemon
 
       - name: Publish to Maven Central
         run: ./gradlew :uxcam-kmp-shared:publishAndReleaseToMavenCentral --no-configuration-cache --no-daemon

@@ -5,7 +5,7 @@ on:
       - 'main'
 jobs:
   build_project:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -16,5 +16,5 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Build Android
-        run: ./gradlew :uxcam-kmp-shared:assembleAndroidMain --no-daemon
+      - name: Build All Platforms
+        run: ./gradlew :uxcam-kmp-shared:build --no-daemon
