@@ -173,6 +173,7 @@ UXCam.addScreenNamesToIgnore(listOf("LoginScreen", "SettingsScreen"))
 | `stopSessionAndUploadData()` | Stop session and upload data |
 | `cancelCurrentSession()` | Cancel current session |
 | `urlForCurrentSession()` | Get URL for current session |
+| `urlForCurrentUser()` | Get URL for all user's sessions |
 | `addScreenNameToIgnore(screenName)` | Exclude screen from recording |
 | `addScreenNamesToIgnore(screenNames)` | Exclude multiple screens |
 | `allowShortBreakForAnotherApp(b)` | Allow short app switches |

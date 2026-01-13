@@ -30,6 +30,8 @@ expect object UXCam {
 
     fun urlForCurrentSession(): String?
 
+    fun urlForCurrentUser(): String?
+
     fun setUserIdentity(identity: String)
 
     fun logEvent(eventName: String?)

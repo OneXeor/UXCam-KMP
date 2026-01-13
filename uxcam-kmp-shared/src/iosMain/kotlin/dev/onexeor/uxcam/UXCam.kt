@@ -59,6 +59,8 @@ actual object UXCam {
 
     actual fun urlForCurrentSession(): String? = UXCam.urlForCurrentSession()
 
+    actual fun urlForCurrentUser(): String? = UXCam.urlForCurrentUser()
+
     actual fun setUserIdentity(identity: String) {
         UXCam.setUserIdentity(identity)
     }
