@@ -76,6 +76,26 @@ actual object UXCam {
 
     actual fun pendingUploads(): Int = UXCam.pendingUploads()
 
+    actual fun optOutOverall() {
+        UXCam.optOutOverall()
+    }
+
+    actual fun optInOverall() {
+        UXCam.optInOverall()
+    }
+
+    actual fun optInOverallStatus(): Boolean = UXCam.optInOverallStatus()
+
+    actual fun optOutOfSchematicRecordings() {
+        // No-op on Android - schematic recordings are iOS-only
+    }
+
+    actual fun optIntoSchematicRecordings() {
+        // No-op on Android - schematic recordings are iOS-only
+    }
+
+    actual fun optInSchematicRecordingStatus(): Boolean = true // Always true on Android (no schematic recordings)
+
     actual fun setUserIdentity(identity: String) {
         UXCam.setUserIdentity(identity)
     }

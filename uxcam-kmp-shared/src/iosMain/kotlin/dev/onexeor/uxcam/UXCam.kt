@@ -65,6 +65,26 @@ actual object UXCam {
 
     actual fun pendingUploads(): Int = UXCam.pendingUploads().toInt()
 
+    actual fun optOutOverall() {
+        UXCam.optOutOverall()
+    }
+
+    actual fun optInOverall() {
+        UXCam.optInOverall()
+    }
+
+    actual fun optInOverallStatus(): Boolean = UXCam.optInOverallStatus()
+
+    actual fun optOutOfSchematicRecordings() {
+        UXCam.optOutOfSchematicRecordings()
+    }
+
+    actual fun optIntoSchematicRecordings() {
+        UXCam.optIntoSchematicRecordings()
+    }
+
+    actual fun optInSchematicRecordingStatus(): Boolean = UXCam.optInSchematicRecordingStatus()
+
     actual fun setUserIdentity(identity: String) {
         UXCam.setUserIdentity(identity)
     }

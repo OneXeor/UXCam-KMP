@@ -176,6 +176,12 @@ UXCam.addScreenNamesToIgnore(listOf("LoginScreen", "SettingsScreen"))
 | `urlForCurrentUser()` | Get URL for all user's sessions |
 | `isRecording()` | Check if recording is currently active |
 | `pendingUploads()` | Get count of sessions pending upload |
+| `optOutOverall()` | Opt user out of all recording (GDPR) |
+| `optInOverall()` | Opt user back into recording |
+| `optInOverallStatus()` | Check if user is opted in |
+| `optOutOfSchematicRecordings()` | Opt out of schematic recordings (iOS only) |
+| `optIntoSchematicRecordings()` | Opt into schematic recordings (iOS only) |
+| `optInSchematicRecordingStatus()` | Check schematic recording status (iOS only) |
 | `addScreenNameToIgnore(screenName)` | Exclude screen from recording |
 | `addScreenNamesToIgnore(screenNames)` | Exclude multiple screens |
 | `allowShortBreakForAnotherApp(b)` | Allow short app switches |

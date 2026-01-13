@@ -36,6 +36,18 @@ expect object UXCam {
 
     fun pendingUploads(): Int
 
+    fun optOutOverall()
+
+    fun optInOverall()
+
+    fun optInOverallStatus(): Boolean
+
+    fun optOutOfSchematicRecordings()
+
+    fun optIntoSchematicRecordings()
+
+    fun optInSchematicRecordingStatus(): Boolean
+
     fun setUserIdentity(identity: String)
 
     fun logEvent(eventName: String?)
