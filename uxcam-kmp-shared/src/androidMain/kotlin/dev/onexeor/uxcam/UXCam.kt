@@ -5,6 +5,7 @@ package dev.onexeor.uxcam
 import com.uxcam.OnVerificationListener
 import com.uxcam.UXCam
 import com.uxcam.datamodel.UXConfig
+import io.github.aakira.napier.Napier
 
 actual object UXCam {
 
@@ -25,7 +26,7 @@ actual object UXCam {
             }
 
             override fun onVerificationFailed(p0: String?) {
-                p0?.let(System.err::println)
+                p0?.let { Napier.e("UXCam verification failed: $it") }
                 completionHandler(false)
             }
         })
@@ -70,26 +71,28 @@ actual object UXCam {
     }
 
     actual fun setUserProperty(key: String?, value: String?) {
-        UXCam.setUserProperty(key, value)
+        if (key != null && value != null) {
+            UXCam.setUserProperty(key, value)
+        }
     }
 
     actual fun logEvent(eventName: String?) {
-        UXCam.logEvent(eventName)
+        eventName?.let { UXCam.logEvent(it) }
     }
 
     actual fun logEvent(eventName: String?, withProperties: Map<String?, *>) {
-        UXCam.logEvent(eventName, withProperties)
+        eventName?.let { UXCam.logEvent(it, withProperties) }
     }
 
     actual fun setUserProperty(key: String?, value: Int) {
-        UXCam.setUserProperty(key, value)
+        key?.let { UXCam.setUserProperty(it, value) }
     }
 
     actual fun setUserProperty(key: String?, value: Float) {
-        UXCam.setUserProperty(key, value)
+        key?.let { UXCam.setUserProperty(it, value) }
     }
 
     actual fun setUserProperty(key: String?, value: Boolean) {
-        UXCam.setUserProperty(key, value)
+        key?.let { UXCam.setUserProperty(it, value) }
     }
 }

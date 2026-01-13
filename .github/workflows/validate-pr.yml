@@ -2,21 +2,19 @@ name: Validate PR
 on:
   pull_request:
     branches:
-      - 'master'
+      - 'main'
 jobs:
   build_project:
-    #    if: startsWith(github.head_ref, 'renovate')
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4
 
-      - name: Setup java
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build
-        run: |
-          ./gradlew :uxcam-kmp-shared:build --no-daemon
+      - name: Build Android
+        run: ./gradlew :uxcam-kmp-shared:compileReleaseKotlinAndroid :uxcam-kmp-shared:bundleReleaseAar --no-daemon
