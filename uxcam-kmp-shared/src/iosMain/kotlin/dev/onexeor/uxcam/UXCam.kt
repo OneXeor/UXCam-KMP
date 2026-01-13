@@ -16,6 +16,9 @@ actual object UXCam {
         val configuration = UXCamConfiguration(key).apply {
             enableAutomaticScreenNameTagging = config.enableAutomaticScreenNameTagging
             enableCrashHandling = config.enableCrashHandling
+            enableMultiSessionRecord = config.enableMultiSessionRecord
+            enableIntegrationLogging = config.enableIntegrationLogging
+            enableAdvancedGestureRecognition = config.enableAdvancedGestureRecognition
         }
         UXCam.optIntoSchematicRecordings()
         UXCam.startWithConfiguration(configuration, completionHandler)

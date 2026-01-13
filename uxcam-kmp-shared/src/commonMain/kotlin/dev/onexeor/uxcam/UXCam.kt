@@ -69,5 +69,11 @@ data class UXConfig(
      * Only for Android
      */
     val enableImprovedScreenCapture: Boolean = false,
-    val enableCrashHandling: Boolean = true
+    val enableCrashHandling: Boolean = true,
+    val enableMultiSessionRecord: Boolean = true,
+    val enableIntegrationLogging: Boolean = false,
+    /**
+     * Only for iOS - enables advanced gesture recognition
+     */
+    val enableAdvancedGestureRecognition: Boolean = false
 )

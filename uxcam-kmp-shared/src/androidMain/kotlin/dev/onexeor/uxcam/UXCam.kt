@@ -18,6 +18,8 @@ actual object UXCam {
             .enableAutomaticScreenNameTagging(config.enableAutomaticScreenNameTagging)
             .enableImprovedScreenCapture(config.enableImprovedScreenCapture)
             .enableCrashHandling(config.enableCrashHandling)
+            .enableMultiSessionRecord(config.enableMultiSessionRecord)
+            .enableIntegrationLogging(config.enableIntegrationLogging)
             .build()
         UXCam.startWithConfiguration(config)
         UXCam.addVerificationListener(object : OnVerificationListener {

@@ -193,6 +193,9 @@ UXCam.addScreenNamesToIgnore(listOf("LoginScreen", "SettingsScreen"))
 | `enableAutomaticScreenNameTagging` | Boolean | `true` | Auto-tag screen names |
 | `enableImprovedScreenCapture` | Boolean | `false` | Improved capture (Android only) |
 | `enableCrashHandling` | Boolean | `true` | Enable crash reporting |
+| `enableMultiSessionRecord` | Boolean | `true` | Record multiple sessions |
+| `enableIntegrationLogging` | Boolean | `false` | Enable verbose debug logging |
+| `enableAdvancedGestureRecognition` | Boolean | `false` | Advanced gestures (iOS only) |
 
 ## Platform-Specific Notes
 
