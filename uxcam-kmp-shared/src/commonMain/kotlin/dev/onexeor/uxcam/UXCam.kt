@@ -16,6 +16,10 @@ expect object UXCam {
 
     fun addScreenNamesToIgnore(screenNames: List<String>)
 
+    fun removeScreenNameToIgnore(screenName: String)
+
+    fun removeAllScreenNamesToIgnore()
+
     fun allowShortBreakForAnotherApp(b: Boolean)
 
     fun pauseScreenRecording()

@@ -36,6 +36,14 @@ actual object UXCam {
         UXCam.addScreenNamesToIgnore(screenNames)
     }
 
+    actual fun removeScreenNameToIgnore(screenName: String) {
+        UXCam.removeScreenNameToIgnore(screenName)
+    }
+
+    actual fun removeAllScreenNamesToIgnore() {
+        UXCam.removeAllScreenNamesToIgnore()
+    }
+
     actual fun allowShortBreakForAnotherApp(b: Boolean) {
         UXCam.allowShortBreakForAnotherApp(b)
     }
