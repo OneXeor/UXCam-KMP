@@ -1,22 +1,26 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    id("com.android.library")
+    id("com.android.kotlin.multiplatform.library")
 }
 
 val libraryVersion: String = project.findProperty("VERSION_NAME")?.toString() ?: "1.0.0"
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
-    android {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
+    androidLibrary {
+        namespace = "dev.onexeor.uxcam.uxcamexample"
+        compileSdk = 36
+        minSdk = 23
+
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
         }
     }
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -34,23 +38,11 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation(project(":uxcam-kmp-shared"))
-            }
+        commonMain.dependencies {
+            implementation(project(":uxcam-kmp-shared"))
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
+        commonTest.dependencies {
+            implementation(kotlin("test"))
         }
-    }
-}
-
-android {
-    namespace = "dev.onexeor.uxcam.uxcamexample"
-    compileSdk = 33
-    defaultConfig {
-        minSdk = 23
     }
 }
