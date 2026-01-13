@@ -15,9 +15,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode 14.3
-        run: sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -27,8 +24,8 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Build Library
-        run: ./gradlew :uxcam-kmp-shared:build --no-daemon
+      - name: Build Android
+        run: ./gradlew :uxcam-kmp-shared:compileReleaseKotlinAndroid :uxcam-kmp-shared:bundleReleaseAar --no-daemon
 
       - name: Publish to Maven Central
         run: ./gradlew :uxcam-kmp-shared:publishAndReleaseToMavenCentral --no-configuration-cache --no-daemon

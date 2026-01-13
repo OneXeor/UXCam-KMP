@@ -5,13 +5,10 @@ on:
       - 'main'
 jobs:
   build_project:
-    runs-on: macos-13
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Select Xcode 14.3
-        run: sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -19,5 +16,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build
-        run: ./gradlew :uxcam-kmp-shared:build --no-daemon
+      - name: Build Android
+        run: ./gradlew :uxcam-kmp-shared:compileReleaseKotlinAndroid :uxcam-kmp-shared:bundleReleaseAar --no-daemon
