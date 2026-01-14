@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-01-14
+
+### Breaking Changes
+
+- **Artifact renamed**: `dev.onexeor:uxcam-kmp-shared` → `dev.onexeor:uxcam-kmp`
+
+  Update your dependencies:
+  ```kotlin
+  // Before
+  implementation("dev.onexeor:uxcam-kmp-shared:<version>")
+
+  // After
+  implementation("dev.onexeor:uxcam-kmp:<version>")
+  ```
+
 ## [1.3.0] - 2026-01-14
 
 ### Added
