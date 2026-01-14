@@ -43,7 +43,7 @@ Add the dependency to your shared module's `build.gradle.kts`:
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation("dev.onexeor:uxcam-kmp-shared:<version>")
+            implementation("dev.onexeor:uxcam-kmp:<version>")
         }
     }
 }
@@ -65,7 +65,7 @@ Add the dependency to your module's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("dev.onexeor:uxcam-kmp-shared:<version>")
+    implementation("dev.onexeor:uxcam-kmp:<version>")
 }
 ```
 
@@ -74,7 +74,7 @@ dependencies {
 Add to your `Podfile`:
 
 ```ruby
-pod 'uxcam-kmp-shared', :git => 'https://github.com/OneXeor/UXCam-KMP.git'
+pod 'uxcam-kmp', :git => 'https://github.com/OneXeor/UXCam-KMP.git'
 ```
 
 Then run:
@@ -215,13 +215,13 @@ UXCam.addScreenNamesToIgnore(listOf("LoginScreen", "SettingsScreen"))
 
 ```bash
 # Build the library
-./gradlew :uxcam-kmp-shared:build
+./gradlew :uxcam-kmp:build
 
 # Run tests
-./gradlew :uxcam-kmp-shared:allTests
+./gradlew :uxcam-kmp:allTests
 
 # Generate iOS framework
-./gradlew :uxcam-kmp-shared:generateDummyFramework
+./gradlew :uxcam-kmp:generateDummyFramework
 ```
 
 ## Roadmap
