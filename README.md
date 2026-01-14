@@ -228,8 +228,8 @@ UXCam.addScreenNamesToIgnore(listOf("LoginScreen", "SettingsScreen"))
 
 This project is actively maintained. See our [GitHub Milestones](https://github.com/OneXeor/UXCam-KMP/milestones) for planned releases:
 
-- [**v1.4.0**](https://github.com/OneXeor/UXCam-KMP/milestone/3) - Testing & Documentation
 - [**v2.1.0**](https://github.com/OneXeor/UXCam-KMP/milestone/5) - Project Modernization
+- [**v2.2.0**](https://github.com/OneXeor/UXCam-KMP/milestone/3) - Testing & Documentation
 
 Contributions are welcome! Check the [open issues](https://github.com/OneXeor/UXCam-KMP/issues) to find something to work on.
 
